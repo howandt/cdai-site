@@ -1,0 +1,9 @@
+cdai-site/
+├── public/
+│   └── index.html         ✅
+├── src/
+│   ├── index.jsx          ✅
+│   └── HomePage.jsx       ✅
+├── package.json           ✅
+├── vite.config.js         ✅
+├── vercel.json            ✅
