@@ -1,58 +1,44 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const perspectives = {
-  Barn: "Jeg prøvede at sige noget, men de grinte. Jeg føler mig dum og vil bare være usynlig.",
-  Lærer: "Han afbryder hele tiden. Jeg ved ikke, hvordan jeg får kontakt uden konflikt.",
-  Pædagog: "Hun trækker sig, så snart der er mange andre. Vi prøver med små grupper, men det er stadig svært.",
-  Forælder: "Derhjemme fungerer det faktisk. Det er som om skolen gør hende mere usikker.",
-  Fagperson: "Det virker som social overbelastning. Hun har brug for tydelige rammer og forudsigelighed."
-};
-
-const RoleplayPerspective = () => {
+export default function RoleplayPerspective() {
   const [selectedRole, setSelectedRole] = useState(null);
 
-**Et digitalt værktøjssystem til fagpersoner og forældre, der arbejder med børn med særlige behov.**
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-2">CD AI Systems</h2>
+      <p className="mb-4">
+        Et digitalt værktøjssystem til fagpersoner og forældre, der arbejder med børn med særlige behov.
+      </p>
 
-Denne app demonstrerer funktionerne i:
-
-- **CDA** – Children Diagnosis Adviser: Relationel vejledning og støtteprofiler
-- **CDT** – Children Diagnosis Tutor: Interaktiv fagbog og læringsmodul
-- **Ann CDF** – Children Diagnosis Friend: Spejlings- og forståelsessystem til børn
-
-## Funktioner
-
-- Realistiske cases med elevperspektiv
-- Skabelonbaseret støtte: handleplaner, visuelle dagsplaner, m.m.
-- PBL-projekter til klasseundervisning
-- Klar til demonstration for skoler, fagteams og studerende
-
-## Teknologi
-
-Bygget med React + Vite. Hostet via Vercel.
-
-## Kontakt
-
-For demo, oplæg eller samarbejde: kontakt@cdaisystems.com
-
----
-
-### Rollespil: Frikvarter – Perspektivskifte
-
-**Situation:** En gruppe børn leger med fangeleg. Et barn bliver ikke taget med og reagerer ved at gå ind igen uden at sige noget.
-
-**🧒 Barnets Perspektiv:**  
-"Jeg stod lige ved siden af, men de kiggede ikke på mig. Jeg sagde ikke noget, for det hjælper alligevel ikke."
-
-**👩‍🏫 Lærerens Perspektiv:**  
-"Han gik bare ind uden at sige noget. Jeg kan ikke gætte, hvad der er galt, når han ikke fortæller det."
+      <div className="space-y-2">
+        <button
+          onClick={() => setSelectedRole('Barn')}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Se fra barnets perspektiv
+        </button>
+        <button
+          onClick={() => setSelectedRole('Voksen')}
+          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        >
+          Se fra den voksnes perspektiv
+        </button>
+      </div>
 
       {selectedRole && (
-        <div style={{ marginTop: "2rem", padding: "1rem", background: "#f9f9f9", borderRadius: "8px" }}>
-          <strong>{selectedRole}s Perspektiv:</strong>
-          <p>{perspectives[selectedRole]}</p>
+        <div className="mt-4 p-3 border rounded bg-gray-50">
+          <h3 className="font-semibold">Valgt rolle: {selectedRole}</h3>
+          <p>
+            {selectedRole === 'Barn'
+              ? '“Jeg prøver, men alle bliver sure på mig.”'
+              : '“Han bliver vred bare jeg siger noget – jeg forstår det ikke.”'}
+          </p>
         </div>
       )}
     </div>
+  );
+}
+
   );
 };
 
