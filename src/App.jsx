@@ -4,6 +4,7 @@ import CaseViewer from "./CaseViewer";
 import TemplateViewer from "./TemplateViewer";
 import CDFamilyViewer from "./CDFamilyViewer";
 import PBLViewer from "./PBLViewer";
+import RoleplayPerspective from "./components/RoleplayPerspective"; // 👈 tilføjet
 
 const App = () => {
   const [page, setPage] = React.useState("home");
@@ -18,6 +19,8 @@ const App = () => {
         return <CDFamilyViewer />;
       case "pbl":
         return <PBLViewer />;
+      case "roleplay":
+        return <RoleplayPerspective />; // 👈 tilføjet
       default:
         return <HomePage />;
     }
@@ -31,6 +34,7 @@ const App = () => {
         <button onClick={() => setPage("templates")}>Skabeloner</button>
         <button onClick={() => setPage("cdf")}>CD-Familie</button>
         <button onClick={() => setPage("pbl")}>PBL</button>
+        <button onClick={() => setPage("roleplay")}>Rollespil</button> {/* 👈 ny knap */}
       </nav>
       <main>{renderPage()}</main>
     </div>
@@ -38,3 +42,4 @@ const App = () => {
 };
 
 export default App;
+
