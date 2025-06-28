@@ -11,9 +11,6 @@ const perspectives = {
 const RoleplayPerspective = () => {
   const [selectedRole, setSelectedRole] = useState(null);
 
-// CD AI Systems
-// Et digitalt værktøjssystem...
-
 **Et digitalt værktøjssystem til fagpersoner og forældre, der arbejder med børn med særlige behov.**
 
 Denne app demonstrerer funktionerne i:
