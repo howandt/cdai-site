@@ -11,21 +11,43 @@ const perspectives = {
 const RoleplayPerspective = () => {
   const [selectedRole, setSelectedRole] = useState(null);
 
-  return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h2>Rollespil: Perspektivskifte</h2>
-      <p>Vælg en rolle og oplev situationen fra deres synspunkt.</p>
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-        {Object.keys(perspectives).map((role) => (
-          <button
-            key={role}
-            onClick={() => setSelectedRole(role)}
-            style={{ padding: "0.5rem 1rem", borderRadius: "8px", border: "1px solid #ccc" }}
-          >
-            {role}
-          </button>
-        ))}
-      </div>
+  # CD AI Systems
+
+**Et digitalt værktøjssystem til fagpersoner og forældre, der arbejder med børn med særlige behov.**
+
+Denne app demonstrerer funktionerne i:
+
+- **CDA** – Children Diagnosis Adviser: Relationel vejledning og støtteprofiler
+- **CDT** – Children Diagnosis Tutor: Interaktiv fagbog og læringsmodul
+- **Ann CDF** – Children Diagnosis Friend: Spejlings- og forståelsessystem til børn
+
+## Funktioner
+
+- Realistiske cases med elevperspektiv
+- Skabelonbaseret støtte: handleplaner, visuelle dagsplaner, m.m.
+- PBL-projekter til klasseundervisning
+- Klar til demonstration for skoler, fagteams og studerende
+
+## Teknologi
+
+Bygget med React + Vite. Hostet via Vercel.
+
+## Kontakt
+
+For demo, oplæg eller samarbejde: kontakt@cdaisystems.com
+
+---
+
+### Rollespil: Frikvarter – Perspektivskifte
+
+**Situation:** En gruppe børn leger med fangeleg. Et barn bliver ikke taget med og reagerer ved at gå ind igen uden at sige noget.
+
+**🧒 Barnets Perspektiv:**  
+"Jeg stod lige ved siden af, men de kiggede ikke på mig. Jeg sagde ikke noget, for det hjælper alligevel ikke."
+
+**👩‍🏫 Lærerens Perspektiv:**  
+"Han gik bare ind uden at sige noget. Jeg kan ikke gætte, hvad der er galt, når han ikke fortæller det."
+
       {selectedRole && (
         <div style={{ marginTop: "2rem", padding: "1rem", background: "#f9f9f9", borderRadius: "8px" }}>
           <strong>{selectedRole}s Perspektiv:</strong>
