@@ -1,20 +1,25 @@
 # CD AI Systems
 
-**Et intelligent digitalt vejledningssystem for børn og unge.**
+**Et digitalt værktøjssystem til fagpersoner og forældre, der arbejder med børn med særlige behov.**
 
-Denne app demonstrerer funktionerne i CDA (Children Diagnosis Adviser), CDT (Children Diagnosis Tutor) og Ann CDF (Children Diagnosis Friend).
+Denne app demonstrerer funktionerne i:
+
+* **CDA** – Children Diagnosis Adviser: Relationel vejledning og støtteprofiler
+* **CDT** – Children Diagnosis Tutor: Interaktiv fagbog og læringsmodul
+* **Ann CDF** – Children Diagnosis Friend: Spejlings- og forståelsessystem til børn
 
 ## Funktioner
 
-- Visning af realistiske cases
-- Interaktive støtteskabeloner
-- Navigation mellem CDA, CDT og CDF
-- Klar til demonstration for skoler og fagpersoner
+* Realistiske cases med elevperspektiv
+* Skabelonbaseret støtte: handleplaner, visuelle dagsplaner, m.m.
+* PBL-projekter til klasseundervisning
+* Klar til demonstration for skoler, fagteams og studerende
 
 ## Teknologi
 
-Bygget med React + Vite. Deployes via Vercel.
+Bygget med React + Vite. Hostet via Vercel.
 
 ## Kontakt
 
-For demo eller oplæg: kontakt@cdassist.io
+For demo, oplæg eller samarbejde: [kontakt@cdaisystems.com](mailto:kontakt@cdaisystems.com)
+
