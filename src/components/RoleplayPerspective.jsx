@@ -39,7 +39,3 @@ export default function RoleplayPerspective() {
   );
 }
 
-  );
-};
-
-export default RoleplayPerspective;
